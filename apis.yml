@@ -1,23 +1,77 @@
 aid: beijingcimccoldchain
+
 name: Beijingcimccoldchain
-description: 'Beijingcimccoldchain is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cimcthermal.com/u_file/2601/photo/f271067a85.png
+
+description: Beijing CIMC Cold Chain Technology Co., Ltd. (BeijingCIMCColdChain) is a leading global innovator and provider of passive temperature
+  control packaging solutions for the pharmaceutical, life‑science and cold‑chain logistics industries. Founded in 2012, the company designs,
+  manufactures and services insulated boxes, phase‑change material packs, gel packs and related cold‑chain products, serving over 600 million
+  vaccine vials and numerous healthcare customers worldwide.
+
 url: https://raw.githubusercontent.com/api-evangelist/beijingcimccoldchain/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- ColdChain
+- Pharmaceuticals
+- Logistics
+- Manufacturing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/beijingcimccoldchain-hosts.yml
+- type: DomainSecurity
+  url: security/beijingcimccoldchain-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/beijingcimccoldchain
+  url: https://cimcthermal.com
+
+apis:
+- name: Beijing CIMC Cold Chain
+  description: API surface referenced by the provider's domain but no machine‑readable contract was found.
+  humanURL: https://cimcthermal.com
+  x-coverage:
+    state: unreadable
+    reason: no-machine-readable-spec
+    detail: The provider's website does not expose an OpenAPI/AsyncAPI/GraphQL spec or other machine‑readable contract.
+    evidence:
+    - url: https://cimcthermal.com
+      status: 200
+    checked: '2026-09-27'
+  aid: beijingcimccoldchain:beijing-cimc-cold-chain
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/beijingcimccoldchain
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
